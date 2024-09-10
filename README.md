@@ -67,3 +67,6 @@ TaxiBookingSystem is a simple taxi booking application that allows users to make
     ```bash
     java -cp bin com.example.taxi.Test
     ```
+## ScreenShot
+![t1](https://github.com/user-attachments/assets/1e6a940f-b758-4559-bd76-f8e0afa1301e)
+
