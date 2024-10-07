@@ -9,7 +9,7 @@ import java.time.LocalTime;
 
 public class Booking {
 
-    private Customer customer;
+    private String customer;
     private Taxi selectedTaxi;
     private Driver selectedDriver;
     private Location startPoint;
@@ -22,7 +22,7 @@ public class Booking {
     }
 
     
-    public Booking(Customer customer, Taxi selectedTaxi, Driver selectedDriver, Location startPoint, Location endPoint, LocalDate dateOfPickup, LocalTime timeOfPickup, int piecesOfLuggage) {
+    public Booking(String customer, Taxi selectedTaxi, Driver selectedDriver, Location startPoint, Location endPoint, LocalDate dateOfPickup, LocalTime timeOfPickup, int piecesOfLuggage) {
         this.customer = customer;
         this.selectedTaxi = selectedTaxi;
         this.selectedDriver = selectedDriver;
@@ -41,7 +41,7 @@ public class Booking {
         try {
             String query = "INSERT INTO Booking (customer_name, selected_taxi_license_plate, selected_driver_name, start_point, end_point, date_of_pickup, time_of_pickup, pieces_of_luggage) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, customer.getName());
+            statement.setString(1, customer);
             statement.setString(2, selectedTaxi.getLicensePlate());
             statement.setString(3, selectedDriver.getName());
             statement.setString(4, startPoint.getLocationName());
@@ -60,9 +60,9 @@ public class Booking {
         try {
             String query = "DELETE FROM Booking WHERE customer_name = ?";
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, customer.getName());
+            statement.setString(1, customer);
             statement.executeUpdate();
-            System.out.println("Your reservation is canceled.");
+            System.out.println( customer + " reservation is canceled.");
         } catch (SQLException e) {
             System.out.println("Error canceling reservation: " + e.getMessage());
         }
@@ -108,17 +108,17 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "customer=" + customer.getName() + ", selectedTaxi=" + selectedTaxi
+        return "customer=" + customer + ", selectedTaxi=" + selectedTaxi
                 + ", selectedDriver=" + selectedDriver + ", startPoint=" + startPoint
                 + ", endPoint=" + endPoint + ", dateOfPickup=" + dateOfPickup + ", timeOfPickup="
                 + timeOfPickup + ", piecesOfLuggage=" + piecesOfLuggage;
     }
 
-    public Customer getCustomer() {
+    public String getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(String customer) {
         this.customer = customer;
     }
 
