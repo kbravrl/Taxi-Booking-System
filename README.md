@@ -16,8 +16,15 @@ Taxi Booking System is a Java Swing-based desktop application that allows users 
 - **GUI**: Built using Java Swing for a desktop-based user interface.
 - **Database**: A SQL database for storing booking details such as customer name, taxi, driver, and trip information.
 - **Backend**: Java classes managing the interaction between the GUI and the database.
+
 ## GUI Functionality
 
 - **Add Booking**: Users can input their details to create a new taxi booking.
 - **Cancel Booking**: Users can cancel their bookings using their name and the selected taxi and driver information.
 - **List Bookings**: Users can view all existing bookings stored in the database.
+
+## Prerequisites
+
+- Java Development Kit (JDK) 11 or later
+- MySQL Server
+- JDBC Driver for MySQL
