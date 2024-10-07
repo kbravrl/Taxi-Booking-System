@@ -1,72 +1,23 @@
-# TaxiBookingSystem
+# Taxi Booking System
 
-TaxiBookingSystem is a simple taxi booking application that allows users to make reservations with specific customers, taxis, drivers, and locations. This application is written in Java and uses a MySQL database.
-
-## Contents
-
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
+## Overview
+Taxi Booking System is a Java Swing-based desktop application that allows users to book taxi rides by selecting pickup and drop-off locations, drivers, taxis, and specifying the date, time, and luggage pieces. The system provides options to confirm or cancel bookings and stores the information in a database.
 
 ## Features
+- **User-friendly GUI**: Simple and intuitive interface to make bookings easily.
+- **Location Selection**: Users can select starting and ending points from predefined locations.
+- **Driver and Taxi Selection**: Option to choose drivers and taxis from available lists.
+- **Pickup Date & Time**: Flexible options for selecting pickup date and time.
+- **Luggage Details**: Enter the number of luggage pieces for better service planning.
+- **Booking Management**: Users can confirm or cancel bookings as needed.
+- **Database Integration**: Bookings are stored and managed in a connected database.
 
-- Create reservations with customer, taxi, driver, and location details
-- Confirm reservations
-- Cancel reservations
-- List all reservations
-- Delete all reservations
+## System Components
+- **GUI**: Built using Java Swing for a desktop-based user interface.
+- **Database**: A SQL database for storing booking details such as customer name, taxi, driver, and trip information.
+- **Backend**: Java classes managing the interaction between the GUI and the database.
+## GUI Functionality
 
-## Requirements
-
-- Java 8 or higher
-- MySQL database
-- mysql-connector-java-8.0.27.jar
-
-## Installation
-
-1. Create a database and the necessary tables in MySQL:
-    ```sql
-    CREATE DATABASE taxi;
-    USE taxi;
-    
-    CREATE TABLE Booking (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        customer_name VARCHAR(255),
-        selected_taxi_license_plate VARCHAR(255),
-        selected_driver_name VARCHAR(255),
-        start_point VARCHAR(255),
-        end_point VARCHAR(255),
-        date_of_pickup DATE,
-        time_of_pickup TIME,
-        pieces_of_luggage INT
-    );
-    ```
-
-2. Update the database connection details in the `DatabaseConnection` class:
-    ```java
-    private static final String url = "jdbc:mysql://localhost:3306/taxi";
-    private static final String username = "root";
-    private static final String password = "password";
-    ```
-
-## Usage
-
-### Making Reservations with GUI
-
-1. Launch the GUI by running the `TaxiBookingApp` class:
-    ```bash
-    java -cp bin com.example.taxi.TaxiBookingApp
-    ```
-
-2. Enter the customer name, select a taxi, driver, start and end points, date, time, and number of luggage pieces, then click the "Book" button.
-
-### Making Reservations via Terminal
-
-1. Run the `Test` class to confirm, cancel, and list reservations via the terminal:
-    ```bash
-    java -cp bin com.example.taxi.Test
-    ```
-## ScreenShot
-![t1](https://github.com/user-attachments/assets/1e6a940f-b758-4559-bd76-f8e0afa1301e)
-
+- **Add Booking**: Users can input their details to create a new taxi booking.
+- **Cancel Booking**: Users can cancel their bookings using their name and the selected taxi and driver information.
+- **List Bookings**: Users can view all existing bookings stored in the database.
