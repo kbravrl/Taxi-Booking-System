@@ -1,33 +1,32 @@
 # Taxi Booking System
 
-## Overview
-Taxi Booking System is a Java Swing-based desktop application that allows users to book taxi rides by selecting pickup and drop-off locations, drivers, taxis, and specifying the date, time, and luggage pieces. The system provides options to confirm or cancel bookings and stores the information in a database.
+Taksi Rezervasyon Sistemi, kullanıcıların teslim alma ve bırakma yerlerini, sürücüleri, taksileri seçerek ve tarih, saat ve bagaj parçalarını belirterek taksi yolculuğu rezervasyonu yapmalarına olanak tanıyan Java Swing tabanlı bir masaüstü uygulamasıdır. Sistem, rezervasyonları onaylama veya iptal etme seçenekleri sunar ve bilgileri bir veritabanında depolar.
 
-## Features
-- **User-friendly GUI**: Simple and intuitive interface to make bookings easily.
-- **Location Selection**: Users can select starting and ending points from predefined locations.
-- **Driver and Taxi Selection**: Option to choose drivers and taxis from available lists.
-- **Pickup Date & Time**: Flexible options for selecting pickup date and time.
-- **Luggage Details**: Enter the number of luggage pieces for better service planning.
-- **Booking Management**: Users can confirm or cancel bookings as needed.
-- **Database Integration**: Bookings are stored and managed in a connected database.
+## Özellikler
+- **Kullanıcı dostu GUI**: Rezervasyonları kolayca yapmak için basit ve sezgisel arayüz.
+- **Konum Seçimi**: Kullanıcılar önceden tanımlanmış konumlardan başlangıç ​​ve bitiş noktalarını seçebilir.
+- **Sürücü ve Taksi Seçimi**: Mevcut listelerden sürücüleri ve taksileri seçme seçeneği.
+- **Teslim Alma Tarihi ve Saati**: Teslim alma tarihi ve saatini seçmek için esnek seçenekler.
+- **Bagaj Ayrıntıları**: Daha iyi hizmet planlaması için bagaj parçası sayısını girin.
+- **Rezervasyon Yönetimi**: Kullanıcılar gerektiğinde rezervasyonları onaylayabilir veya iptal edebilir.
+- **Veritabanı Entegrasyonu**: Rezervasyonlar bağlı bir veritabanında saklanır ve yönetilir.
 
-## System Components
-- **GUI**: Built using Java Swing for a desktop-based user interface.
-- **Database**: A SQL database for storing booking details such as customer name, taxi, driver, and trip information.
-- **Backend**: Java classes managing the interaction between the GUI and the database.
+## Sistem Bileşenleri
+- **GUI**: Masaüstü tabanlı bir kullanıcı arayüzü için Java Swing kullanılarak oluşturulmuştur.
+- **Veritabanı**: Müşteri adı, taksi, şoför ve yolculuk bilgileri gibi rezervasyon ayrıntılarını depolamak için bir SQL veritabanı.
+- **Arka uç**: GUI ile veritabanı arasındaki etkileşimi yöneten Java sınıfları.
 
-## GUI Functionality
+## GUI İşlevselliği
 
-- **Add Booking**: Users can input their details to create a new taxi booking.
-- **Cancel Booking**: Users can cancel their bookings using their name and the selected taxi and driver information.
-- **List Bookings**: Users can view all existing bookings stored in the database.
+- **Rezervasyon Ekle**: Kullanıcılar yeni bir taksi rezervasyonu oluşturmak için ayrıntılarını girebilir.
+- **Rezervasyonu İptal Et**: Kullanıcılar adlarını ve seçilen taksi ve şoför bilgilerini kullanarak rezervasyonlarını iptal edebilir.
+- **Rezervasyonları Listele**: Kullanıcılar veritabanında depolanan tüm mevcut rezervasyonları görüntüleyebilir.
 
-## Prerequisites
+## Önkoşullar
 
-- Java Development Kit (JDK) 11 or later
-- MySQL Server
-- JDBC Driver for MySQL
+- Java Geliştirme Kiti (JDK) 11 veya üzeri
+- MySQL Sunucusu
+- MySQL için JDBC Sürücüsü
 
 https://github.com/user-attachments/assets/7c1c16ed-7ef3-466c-8add-0cd34b00c1eb
 
